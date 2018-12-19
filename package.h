@@ -2,6 +2,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+struct LinkNode{
+    int val;
+    LinkNode* next;
+    LinkNode(int x):
+        val(x),
+        next(nullptr)
+    {};
+};
 struct TreeNode{
     int val;
     TreeNode* left;
