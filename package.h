@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct LinkNode{
+struct ListNode{
     int val;
     LinkNode* next;
     LinkNode(int x):

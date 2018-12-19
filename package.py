@@ -4,7 +4,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
-class LinkNode(object):
+class ListNode(object):
     def __init__(self, x):
         self.val = x
         self.next = None
