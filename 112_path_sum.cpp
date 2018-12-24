@@ -7,7 +7,7 @@ class Solution {
             if(!root)
                 return false;
             int tmp = sum - root->val;
-            if(tmp == 0)
+            if(tmp == 0 && !root->left && !root->right) // root to leaf
                 return true;
             if(hasPathSum(root->left, tmp) || hasPathSum(root->right, tmp)){
                 return true;
@@ -27,7 +27,7 @@ int main(){
     b.left = &d;
     b.right = &e;
     c.right = &f;
-    int sum = 999999999;
+    int sum = 999;
     if(Solution::hasPathSum(&a, sum))
         cout << "has path .." << endl;
     else
