@@ -1,11 +1,11 @@
-#prama once
+#pragma once
 #include <bits/stdc++.h>
 using namespace std;
 
 struct ListNode{
     int val;
-    LinkNode* next;
-    LinkNode(int x):
+    ListNode* next;
+    ListNode(int x):
         val(x),
         next(nullptr)
     {};
