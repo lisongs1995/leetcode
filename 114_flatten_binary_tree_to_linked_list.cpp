@@ -29,6 +29,17 @@ class Solution{
                 root->left = nullptr;
             }
         }
+        static void postOrderFlatten(TreeNode* root){
+            if(!root)
+                return;
+            postOrderFlatten(root->right);
+            postOrderFlatten(root->left);
+            root->right = prev;
+            root->left = nullptr;
+            prev = root;
+        }
+    private:
+        TreeNode* prev = nullptr;
 };
 int main(){
     TreeNode a(0);
