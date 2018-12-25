@@ -1,0 +1,5 @@
+*.o
+*.out
+*.pyc
+test.cpp
+__pycache__

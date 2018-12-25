@@ -12,6 +12,11 @@ struct TreeLinkNode{
         right(nullptr),
         next(nullptr) {}
 };
+static const auto ___ = [](){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    return nullptr;
+};
 class Solution{
 public:
     static void connect(TreeLinkNode* root){
@@ -38,6 +43,17 @@ public:
         
             last = last->left;
         }
+    }
+    static void recursive(TreeLinkNode* root){
+        if(!root)
+            return ;
+        if(root->left){
+            root->left->next = root->right;
+            if(root->next)
+                root->right->next = root->next->left;
+        }
+        recursive(root->left);
+        recursive(root->right);
     }
 };
 
