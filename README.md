@@ -10,9 +10,9 @@ c-o
 
 c++ speed up ios, toggle off cout && cin, use printf and scanf instead.
 ```C++
-const auto ___ = [](){
+static const auto ___ = [](){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     return nullptr;
-}
+};
 ```
