@@ -38,6 +38,20 @@ class Solution{
             root->left = nullptr;
             prev = root;
         }
+    void nonRecursive(TreeNode* root){
+        TreeNode* now = root;
+        while(now){
+            if(now->left){
+                TreeNode* pre = now->left;
+                while(pre->right)
+                    pre = pre->right;
+                pre->right = now->right;
+                now->right = now->left;
+                now->left = nullptr;
+            }
+            now = now->right;
+        }
+    }
     private:
         TreeNode* prev = nullptr;
 };
