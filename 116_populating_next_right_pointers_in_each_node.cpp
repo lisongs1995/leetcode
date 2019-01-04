@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 #include "package.h"
 using namespace std;
+/**
+ * You may only use constant extra space
+ *
+ * Recursive approach is fine, implicit stack space does not count as extra space 
+ * for this problem.
+ *
+ * You may assume that it is a perfect binary tree 完全二叉树
+ * (this note shows difference with  leetcode 117 "populating next right pointers in each node II")
+ *
+ */
 struct TreeLinkNode{
     int val;
     TreeLinkNode* left;
