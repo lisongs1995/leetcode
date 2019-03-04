@@ -37,6 +37,10 @@ void dfs1(string&s, int k, int m){
     }
 
 }
+//   123  132 312
+//
+
+
 bool next_permutation(string& s){
     if(s.size()<2)
         return false;
